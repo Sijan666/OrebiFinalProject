@@ -25,11 +25,10 @@ const Banner = () => {
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 2500,
         speed: 1500,
         arrows: false,
-
+        autoplay : true,
+        autoSpeed : 1500,
     };
     return (
         <>

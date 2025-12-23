@@ -13,6 +13,8 @@ import axios from "axios";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import NextArrow from "../NextArrow";
+import PrevArrow from "../PrevArrow";
 
 const Bestseller = () => {
     let [allData, setAllData] = useState([]);
@@ -31,6 +33,8 @@ const Bestseller = () => {
         slidesToScroll: 1,
         autoplay : true,
         autoSpeed : 1500,
+        nextArrow: <NextArrow />,
+        prevArrow: <PrevArrow />
     };
     return (
         <div className="pt-8 pb-20">

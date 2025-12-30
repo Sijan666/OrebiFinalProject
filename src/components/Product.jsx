@@ -7,7 +7,7 @@ import { FaShoppingCart } from "react-icons/fa";
 
 const Product = ({productImg , badgeText , productTitle , productPrice}) => {
     return (
-        <div className="group mx-2 ">
+        <div className="group mx-2">
             <div className="relative overflow-hidden bg-[#F3F3F3]">
                 <Images imgSrc={productImg} className={'w-full'}/>
                 <Badge badgeText={badgeText} className={"absolute"}/>

@@ -25,23 +25,24 @@ const Bestseller = () => {
         }
         alldatas();
     });
-    var settings = {
-        dots: false,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        autoplay : true,
-        autoSpeed : 1500,
-        nextArrow: <NextArrow />,
-        prevArrow: <PrevArrow />
-    };
+    // var settings = {
+    //     dots: false,
+    //     infinite: true,
+    //     speed: 500,
+    //     slidesToShow: 4,
+    //     slidesToScroll: 1,
+    //     autoplay : true,
+    //     autoSpeed : 1500,
+    //     nextArrow: <NextArrow />,
+    //     prevArrow: <PrevArrow />
+    // };
     return (
         <div className="pt-8 pb-20">
             <Container>
                 <h3 className="text-[39px] text-[#262626] font-bold block pb-[30px]">Our Bestsellers</h3>
-                    <Slider {...settings}>
-                        {allData.map((item)=>(
+                    {/* <Slider {...settings}> */}
+                    <Flex>
+                        {allData.slice(5,9).map((item)=>(
                         <div className="w-1/4">
                             <Product
                             productImg={item.thumbnail}
@@ -51,7 +52,9 @@ const Bestseller = () => {
                             />
                         </div>
                         ))} 
-                    </Slider>
+                    </Flex>
+
+                    {/* </Slider> */}
             </Container>
         </div>
     );

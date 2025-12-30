@@ -8,34 +8,59 @@ import { FaUser } from "react-icons/fa";
 import { GoTriangleDown } from "react-icons/go";
 import { FaShoppingCart } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react';
+import { useState } from 'react';
 
 const SearchBar = () => {
+
+    const [ show , setShow] = useState(false)
+    const [ logshow , logsetShow] = useState(false)
+
     return (
         <>
         <div className="bg-[#F5F5F3] border border-t-[#979797] border-b-[#979797]">
             <Container className={'py-6'}>
                 <Flex className={'justify-between items-center'}>
-                    <div className="iconText items-center">
-                        
-                        {/* <h3 className='pl-3 text-[14px] text-[#262626]'>Shop by Category</h3> */}
-                        <Popover className="relative ">
-                            <PopoverButton className={'ml-2 outline-none'}>
-                                <HugeiconsIcon icon={MenuTwoLineIcon} color='text-[#262626]' strokeWidth={3} className='inline-block mr-3'/> 
-                                Shop by Category
-                            </PopoverButton>
-                            <PopoverPanel anchor="bottom" className="flex flex-col bg-gray-400 p-[15px] mt-2 w-[170px] text-white rounded-[20px] font-bold">
-                                <Link to={'/shop'} className='mb-2'>
-                                    Shop
-                                </Link>
-                                <Link to={'/about'} className='mb-2'>
-                                    About
-                                </Link>
-                                <Link to={'/contact'} className='mb-2'>
-                                    Contact
-                                </Link>
-                            </PopoverPanel>
-                        </Popover>
+                    <div className="iconText flex items-center relative cursor-pointer">
+                        <div className='pr-3 text-[14px] text-[#262626] flex gap-x-2 items-center ' onClick={()=>setShow(!show)}>
+                            <HugeiconsIcon icon={MenuTwoLineIcon} color='text-[#262626]' strokeWidth={3}/>
+                            Shop by Category
+                        </div>
+                        {show && (
+                            <div className="w-[265px] bg-black absolute top-8 left-0 z-2">
+                                <ul>
+                                    <li className='group py-4 px-5 text-[#FFFFFF]/70 hover:text-white hover:font-bold text-[14px] border-b border-[#2D2D2D] cursor-pointer'>
+                                        <span className='inline-block duration-300 group-hover:translate-x-2'>
+                                            Accesories
+                                        </span>
+                                    </li>
+                                    <li className='group py-4 px-5 text-[#FFFFFF]/70 hover:text-white hover:font-bold text-[14px] border-b border-[#2D2D2D] cursor-pointer'>
+                                        <span className='inline-block duration-300 group-hover:translate-x-2'>
+                                            Furniture
+                                        </span>
+                                    </li>
+                                    <li className='group py-4 px-5 text-[#FFFFFF]/70 hover:text-white hover:font-bold text-[14px] border-b border-[#2D2D2D] cursor-pointer'>
+                                        <span className='inline-block duration-300 group-hover:translate-x-2'>
+                                            Electronics
+                                        </span>
+                                    </li>
+                                    <li className='group py-4 px-5 text-[#FFFFFF]/70 hover:text-white hover:font-bold text-[14px] border-b border-[#2D2D2D] cursor-pointer'>
+                                        <span className='inline-block duration-300 group-hover:translate-x-2'>
+                                            Clothes
+                                        </span>
+                                    </li>
+                                    <li className='group py-4 px-5 text-[#FFFFFF]/70 hover:text-white hover:font-bold text-[14px] border-b border-[#2D2D2D] cursor-pointer'>
+                                        <span className='inline-block duration-300 group-hover:translate-x-2'>
+                                            Bags
+                                        </span>
+                                    </li>
+                                    <li className='group py-4 px-5 text-[#FFFFFF]/70 hover:text-white hover:font-bold text-[14px] border-b border-[#2D2D2D] cursor-pointer'>
+                                        <span className='inline-block duration-300 group-hover:translate-x-2'>
+                                            Home appliances
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        )}
                     </div>
                     <div className="searchBar">
                         <div className="flex justify-between items-center bg-white border-gray-300 px-5 py-5 w-[600px]">
@@ -43,16 +68,40 @@ const SearchBar = () => {
                             <button className="cursor-pointer"><FaSearch /></button>
                         </div>
                     </div>
-                    <div className="icons flex gap-x-2">
-                        <Link to={'/login'}>
-                            <FaUser />
-                        </Link>
-                        <Link to={'/'}>
-                            <GoTriangleDown />
-                        </Link>
-                        <Link to={'/'}>
-                            <FaShoppingCart />
-                        </Link>
+                    <div className="icons ">
+                        <ul className='flex gap-x-2'>
+                            <li>
+                                <Link to={'/login'}>
+                                    <FaUser />
+                                </Link>
+                            </li>
+                            <li className='relative cursor-pointer'>
+                                <div className="" onClick={()=>logsetShow(!logshow)}>
+                                    <GoTriangleDown/>
+                                </div>
+                                {logshow && (
+                                <div className="w-[120px] bg-black absolute top-8 left-1/2 -translate-x-1/2 z-1">
+                                    <li className='group py-4 px-5 text-[#FFFFFF]/70 hover:text-white hover:font-bold text-[14px] border-b border-[#2D2D2D] cursor-pointer'>
+                                        <span className='inline-block duration-300 group-hover:translate-x-2'>
+                                            <Link to={'/login'}>
+                                                Log In
+                                            </Link>
+                                        </span>
+                                    </li>
+                                    <li className='group py-4 px-5 text-[#FFFFFF]/70 hover:text-white hover:font-bold text-[14px] border-b border-[#2D2D2D] cursor-pointer'>
+                                        <span className='inline-block duration-300 group-hover:translate-x-2'>
+                                            <Link to={'/login'}>
+                                                Log In
+                                            </Link>
+                                        </span>
+                                    </li>
+                                </div>
+                                )}
+                            </li>
+                            <Link to={'/shop'} className='ml-3'>
+                                <FaShoppingCart />
+                            </Link>
+                        </ul>
                     </div>
                 </Flex>
             </Container>

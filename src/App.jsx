@@ -8,6 +8,7 @@ import Shop from './components/pages/Shop'
 import ContactUs from './components/pages/ContactUs'
 import Journal from './components/pages/Journal'
 import Login from './components/pages/Login'
+import Signup from './components/pages/Signup'
 
 
 function App () {
@@ -21,6 +22,7 @@ function App () {
           <Route path="/contact" element={<ContactUs/>} />
           <Route path="/journal" element={<Journal/>} />
           <Route path="/login" element={<Login/>} />
+          <Route path="/signup" element={<Signup/>} />
         </Route>
           <Route path="*" element={<Error/>} />
       </Routes>

@@ -92,8 +92,8 @@ const SearchBar = () => {
                                     </li>
                                     <li className='group py-4 px-5 text-[#FFFFFF]/70 hover:text-white hover:font-bold text-[14px] border-b border-[#2D2D2D] cursor-pointer'>
                                         <span className='inline-block duration-300 group-hover:translate-x-2'>
-                                            <Link to={'/login'}>
-                                                Log In
+                                            <Link to={'/signup'}>
+                                                Sign Up
                                             </Link>
                                         </span>
                                     </li>

@@ -9,9 +9,11 @@ import { CiGrid2H } from "react-icons/ci";
 // import best3 from '../../assets/best3.png'
 // import so3 from '../../assets/so3.png'
 // import so2 from '../../assets/so2.png'
+// import cl1 from '../../assets/cl1.png'
 
 import Product from '../Product';
 import axios from 'axios';
+import Images from '../Images';
 
 const Shop = () => {
     const containerRef = useRef(null);
@@ -59,12 +61,30 @@ const Shop = () => {
                     </div>
                     <div className="color py-12">
                         <h4 className='text-[#262626] font-bold text-[20px] pb-[30px]'>Shop by Color</h4>
-                        <p data-filter="all" className='text-[#767676] text-base border-b border-[#F0F0F0] pb-[22px] my-[30px] cursor-pointer hover:font-bold hover:text-black duration-300'>All Color</p>
-                        <p data-filter=".catOne" className='text-[#767676] text-base border-b border-[#F0F0F0] pb-[22px] my-[30px] cursor-pointer hover:font-bold hover:text-black duration-300'>Color 1</p>
-                        <p data-filter=".catTwo" className='text-[#767676] text-base border-b border-[#F0F0F0] pb-[22px] my-[30px] cursor-pointer hover:font-bold hover:text-black duration-300'>Color 2</p>
-                        <p data-filter=".catThree" className='text-[#767676] text-base border-b border-[#F0F0F0] pb-[22px] my-[30px] cursor-pointer hover:font-bold hover:text-black duration-300'>Color 3</p>
-                        <p data-filter=".catFour" className='text-[#767676] text-base border-b border-[#F0F0F0] pb-[22px] my-[30px] cursor-pointer hover:font-bold hover:text-black duration-300'>Color 4</p>
-                        <p data-filter=".catFive" className='text-[#767676] text-base border-b border-[#F0F0F0] pb-[22px] my-[30px] cursor-pointer hover:font-bold hover:text-black duration-300'>Color 5</p>
+                        <div data-filter="all" className='text-[#767676] text-base border-b border-[#F0F0F0] pb-[22px] my-[30px]  cursor-pointer hover:font-bold hover:text-black duration-300 flex gap-x-2.5 items-center'>
+                            {/* <div className="rounded-[50%] h-4 w-4 bg-red-700"></div> */}
+                            <p >All Color</p>
+                        </div>
+                        <div data-filter=".catOne" className='text-[#767676] text-base border-b border-[#F0F0F0] pb-[22px] my-[30px]  cursor-pointer hover:font-bold hover:text-black duration-300 flex gap-x-2.5 items-center'>
+                            <div className="rounded-[50%] h-4 w-4 bg-black"></div>
+                            <p >Color 1</p>
+                        </div>
+                        <div data-filter=".catTwo" className='text-[#767676] text-base border-b border-[#F0F0F0] pb-[22px] my-[30px]  cursor-pointer hover:font-bold hover:text-black duration-300 flex gap-x-2.5 items-center'>
+                            <div className="rounded-[50%] h-4 w-4 bg-[#FF8686]"></div>
+                            <p >Color 2</p>
+                        </div>
+                        <div data-filter=".catThree" className='text-[#767676] text-base border-b border-[#F0F0F0] pb-[22px] my-[30px]  cursor-pointer hover:font-bold hover:text-black duration-300 flex gap-x-2.5 items-center'>
+                            <div className="rounded-[50%] h-4 w-4 bg-[#7ED321]"></div>
+                            <p >Color 3</p>
+                        </div>
+                        <div data-filter=".catFour" className='text-[#767676] text-base border-b border-[#F0F0F0] pb-[22px] my-[30px]  cursor-pointer hover:font-bold hover:text-black duration-300 flex gap-x-2.5 items-center'>
+                            <div className="rounded-[50%] h-4 w-4 bg-[#B6B6B6]"></div>
+                            <p >Color 4</p>
+                        </div>
+                        <div data-filter=".catFive" className='text-[#767676] text-base border-b border-[#F0F0F0] pb-[22px] my-[30px]  cursor-pointer hover:font-bold hover:text-black duration-300 flex gap-x-2.5 items-center'>
+                            <div className="rounded-[50%] h-4 w-4 bg-[#15CBA5]"></div>
+                            <p >Color 5</p>
+                        </div>
                     </div>
                     <div className="brand py-12">
                         <h4 className='text-[#262626] font-bold text-[20px] pb-[30px]'>Shop by Brand</h4>

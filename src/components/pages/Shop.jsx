@@ -114,7 +114,7 @@ const Shop = () => {
                         <div className="flex justify-between gap-x-5">
                             <div className="flex gap-x-3 items-center ">
                                 <p className='text-[#767676] text-base'>Sort by:</p>
-                                <select className='px-4 py-1 text-[#767676] border border-[#F0F0F0] outline-none w-40'>
+                                <select className='px-4 py-1 text-[#767676] border border-[#F0F0F0] outline-none w-40 appearance-none'>
                                     <option value="">Featured</option>
                                     <option value="">Best Sellers</option>
                                     <option value="">New Arrivals</option>
@@ -123,7 +123,7 @@ const Shop = () => {
                             </div>
                             <div className="flex gap-x-3 items-center ">
                                 <p className='text-[#767676] text-base'>Shows:</p>
-                                <select className='px-4 py-1 text-[#767676] border border-[#F0F0F0] outline-none w-20'>
+                                <select className='px-4 py-1 text-[#767676] border border-[#F0F0F0] outline-none w-20 appearance-none'>
                                     <option value="">12</option>
                                     <option value="">24</option>
                                     <option value="">36</option>

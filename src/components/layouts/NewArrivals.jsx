@@ -28,27 +28,27 @@ const NewArrivals = () => {
     };
     return (
         <>
-            <div className="pt-8 pb-20">
+            <div className="lg:pt-8 lg:pb-20">
                 <Container>
                     <h3 className="text-[39px] text-[#262626] font-bold block pb-[30px]">New Arrivals</h3>
-                    <div className="-mx-2"> 
+                    <div className="lg:-mx-2 "> 
                         <Slider {...settings}>
-                            <div className="w-1/4">
+                            <div className="lg:w-1/4 w-1/2">
                                 <Product productImg={n1} badgeText={'New'} productTitle={'Basic Crew Neck Tee'} productPrice={'$44.00'}/>
                             </div>
-                            <div className="w-1/4">
+                            <div className="lg:w-1/4 w-1/2">
                                 <Product productImg={n2} badgeText={'New'} productTitle={'Basic Crew Neck Tee'} productPrice={'$44.00'}/>
                             </div>
-                            <div className="w-1/4">
+                            <div className="lg:w-1/4 w-1/2">
                                 <Product productImg={n3} badgeText={'New'} productTitle={'Basic Crew Neck Tee'} productPrice={'$44.00'}/>
                             </div>
-                            <div className="w-1/4">
+                            <div className="lg:w-1/4 w-1/2">
                                 <Product productImg={n4} badgeText={'New'} productTitle={'Basic Crew Neck Tee'} productPrice={'$44.00'}/>
                             </div>
-                            <div className="w-1/4">
+                            <div className="lg:w-1/4 w-1/2">
                                 <Product productImg={n1} badgeText={'New'} productTitle={'Basic Crew Neck Tee'} productPrice={'$44.00'}/>
                             </div>
-                            <div className="w-1/4">
+                            <div className="lg:w-1/4 w-1/2">
                                 <Product productImg={n2} badgeText={'New'} productTitle={'Basic Crew Neck Tee'} productPrice={'$44.00'}/>
                             </div>
                         </Slider>

@@ -11,19 +11,19 @@ const Ads = () => {
     return (
         <div className="py-[135px]">
             <Container>
-                <Flex className="justify-between gap-x-8">
-                    <div className="leftSide w-1/2 relative">
+                <Flex className="flex-wrap lg:flex-nowrap lg:justify-between lg:gap-x-8 gap-y-4">
+                    <div className="lg:leftSide lg:w-1/2 relative">
                         <Link to={'/shop'}>
                         <Images imgSrc={sh1} />
                         </Link>
                     </div>
-                    <div className="rightSide w-1/2 relative">
-                        <div className="pb-8">
+                    <div className="lg:rightSide lg:w-1/2 relative">
+                        <div className="lg:pb-8">
                             <Link to={'/shop'}>
                             <Images imgSrc={sh2} />
                             </Link>
                         </div>
-                        <div>
+                        <div className='mt-4 lg:mt-0'>
                             <Link to={'/shop'}>
                             <Images imgSrc={sh3} />
                             </Link>

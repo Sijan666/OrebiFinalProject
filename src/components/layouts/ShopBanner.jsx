@@ -14,7 +14,7 @@ const ShopBanner = () => {
                     </div>
                     <div className="textPart w-[60%]">
                         <h3 className="font-bold text-[39px] text-[#262626]">Phone of the year</h3>
-                        <p className="py-10 text-base text-[#262626] w-[511px]">Lorem Ipsum is simply dummy text of the printing and typesetting industry orem Ipsum..</p>
+                        <p className="py-10 text-base text-[#262626] lg:w-[511px] w-200px">Lorem Ipsum is simply dummy text of the printing and typesetting industry orem Ipsum..</p>
                         <Button btnText={'Shop Now'} className={'py-4 px-14 text-base font-bold'}/>
                     </div>
                 </Flex>

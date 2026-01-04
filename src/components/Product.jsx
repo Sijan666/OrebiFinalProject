@@ -26,11 +26,11 @@ const Product = ({productImg , badgeText , productTitle , productPrice}) => {
                     </div>
                 </div>
             </div>
-            <div className="flex justify-between items-center h-[75px] py-4 px-2">
-                <h4 className="font-bold text-[20px] text-[#262626]">{productTitle}</h4>
-                <p className="text-base text-[#767676]">{productPrice}</p>
+            <div className="flex justify-between items-center lg:h-[75px] h-[25px] py-4 px-2">
+                <h4 className="font-bold lg:text-[20px] text-[#262626] text-[10px]">{productTitle}</h4>
+                <p className="lg:text-base text-[10px] text-[#767676]">{productPrice}</p>
             </div>
-            <p className="text-base text-[#767676] px-2">Black</p>
+            <p className="lg:text-base text-[10px] text-[#767676] px-2">Black</p>
         </div>
     );
 };
